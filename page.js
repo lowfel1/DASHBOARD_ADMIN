@@ -12,23 +12,23 @@ export default function ArticlesDashboard() {
   useEffect(() => {
     fetch("/api/news/latest")
       .then(response => {
-        if (!response.ok) {
-          throw new Error("Erreur lors de la récupération des articles");
+        if (!response.ok) {olmddslmvl
+          throw new Error("Erreur lors de la récupération des articles");nkasndkla
         }
         return response.json();
       })
-      .then(data => {
+      .then(data => {wdnkwndkwndnkwndknw
         setArticles(data);
         setLoading(false);
       })
       .catch(error => {
         console.error("Erreur de chargement des articles:", error);
         setLoading(false);
-      });
+      });dnkwndkwwwndknd
   }, []);
 
   // Fonction pour mettre à jour le statut de l'article
-  const handleUpdateStatus = (articleId, status) => {
+  const handleUpdateStatus = (articleId, status) => {dwkdnkwdnkdw
     fetch(`/api/news/${articleId}/status`, {
       method: "PATCH",
       headers: {
